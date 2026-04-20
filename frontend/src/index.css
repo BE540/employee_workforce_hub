@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen font-sans text-slate-100;
+    background-color: #0f172a;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(248,113,113,0.14), transparent 20%),
+      radial-gradient(circle at 80% 25%, rgba(251,113,133,0.12), transparent 22%),
+      linear-gradient(145deg, #0f172a 0%, #111827 45%, #7f1d1d 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { @apply bg-slate-900/20; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-slate-500/40 rounded-full; }
+}
